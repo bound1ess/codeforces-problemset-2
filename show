@@ -1,0 +1,37 @@
+#!/usr/bin/env python3
+
+import sys, os
+
+def accept(s):
+  if 'freopen' in s:
+    return False
+  if 'clock' in s:
+    return False
+  return True
+
+if not len(sys.argv) == 2:
+  print('Incorrect execution')
+  quit()
+
+task = sys.argv[1]
+task_file_name = ''
+
+for char in list(task):
+  if '0' <= char and char <= '9':
+    task_file_name += char
+  else:
+    break
+
+task_file_name += '/' + task[-1:] + '.cpp'
+
+if not os.path.exists(task_file_name):
+  print('No such file ' + task_file_name);
+  quit()
+
+task_file = open(task_file_name, 'r')
+
+for line in task_file:
+  if accept(line):
+    print(line, end = '')
+
+# vim: set syntax=python:
