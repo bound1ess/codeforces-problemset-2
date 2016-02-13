@@ -1,3 +1,3 @@
 # Solved problems
 
-1. ???
+1. 622A
