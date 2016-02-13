@@ -1,0 +1,98 @@
+#!/usr/bin/env python3
+
+import sys, os
+from subprocess import check_call
+
+if not len(sys.argv) == 2:
+  print('Incorrect execution')
+  quit()
+
+task = sys.argv[1]
+task_dir = ''
+
+for char in list(task):
+  if '0' <= char and char <= '9':
+    task_dir += char
+  else:
+    break
+
+task_dir += '/'
+source_file = task_dir + task[-1:] + '.cpp'
+test_file = task_dir + task[-1:] + '.test'
+input_file = task_dir + 'input'
+output_file = task_dir + 'output'
+exec_file = task_dir + task[-1:]
+
+if not os.path.exists(source_file):
+  print('Source file not found: ' + souce_file)
+  quit()
+
+if not os.path.exists(test_file):
+  print('Test file not found: ' + test_file)
+  quit()
+
+# read test file
+tests = [] # [[in, out], ...]
+test_in = []
+test_out = []
+test_file_lines = [line.strip() for line in open(test_file, 'r')]
+in_section = False
+out_section = False
+
+for line in test_file_lines:
+  if 'in:' in line:
+    if out_section:
+      tests.append([test_in, test_out])
+      test_in = []
+      test_out = []
+    out_section = False
+    in_section = True
+    continue
+  if 'out:' in line:
+    if not in_section:
+      print('Invalid format')
+      quit()
+    in_section = False
+    out_section = True
+    continue
+  if in_section:
+    if 0 < len(line):
+      test_in.append(line)
+  elif out_section:
+    if 0 < len(line):
+      test_out.append(line)
+  else:
+    print('Invalid format')
+    quit()
+
+print('Parsed ' + str(len(tests)) + ' test cases')
+idx = 1
+
+for case in tests:
+  print('Running test case #' + str(idx));
+  idx += 1
+  if os.path.exists(input_file):
+    os.remove(input_file)
+  input_file_handler = open(input_file, 'w')
+  for line in case[0]:
+    input_file_handler.write(line + '\n')
+  input_file_handler.close()
+  #print('Created input file, running the executable')
+  check_call(['./invoke', task_dir, task[-1:]])
+  if not os.path.exists(output_file):
+    print('Output file was not generated: ' + output_file)
+    quit()
+  output_file_handler = open(output_file, 'r')
+  line_pos = 0
+  for line in output_file_handler:
+    if not line.strip() == case[1][line_pos]:
+      print('Failure!')
+      print('Expected: ' + case[1][line_pos])
+      print('Got: ' + line.strip())
+      quit()
+    line_pos += 1
+  output_file_handler.close()
+
+print('Done! Seems good')
+
+# vim: set syntax=python:

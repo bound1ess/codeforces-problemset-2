@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+cd $1
+./$2
+cd - > /dev/null
+
+# vim: set syntax=bash
