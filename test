@@ -65,6 +65,9 @@ for line in test_file_lines:
     print('Invalid format')
     quit()
 
+if 0 < len(test_in) and 0 < len(test_out):
+  tests.append([test_in, test_out])
+
 print('Parsed ' + str(len(tests)) + ' test cases')
 idx = 1
 
