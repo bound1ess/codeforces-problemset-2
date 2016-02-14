@@ -93,6 +93,13 @@ for case in tests:
     line_pos += 1
   output_file_handler.close()
 
+# cleanup
+if os.path.exists(input_file):
+  os.remove(input_file)
+
+if os.path.exists(output_file):
+  os.remove(output_file)
+
 print('Done! Seems good')
 
 # vim: set syntax=python:
