@@ -1,0 +1,15 @@
+in:
+6
+Jack captain
+Alice woman
+Charlie man
+Teddy rat
+Bob child
+Julia woman
+out:
+Teddy
+Alice
+Bob
+Julia
+Charlie
+Jack
