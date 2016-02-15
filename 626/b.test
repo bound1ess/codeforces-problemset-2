@@ -1,0 +1,17 @@
+in:
+2
+RB
+out:
+G
+
+in:
+3
+GRG
+out:
+BR
+
+in:
+5
+BBBBB
+out:
+B
