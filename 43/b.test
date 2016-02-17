@@ -1,0 +1,23 @@
+in:
+Instead of dogging Your footsteps it disappears but you dont notice anything
+where is your dog
+out:
+NO
+
+in:
+Instead of dogging Your footsteps it disappears but you dont notice anything
+Your dog is upstears
+out:
+YES
+
+in:
+Instead of dogging your footsteps it disappears but you dont notice anything
+Your dog is upstears
+out:
+NO
+
+in:
+abcdefg hijk
+k j i h g f e d c b a
+out:
+YES
