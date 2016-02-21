@@ -1,0 +1,16 @@
+in:
+3
+.CC
+C..
+C.C
+out:
+4
+
+in:
+4
+CC..
+C..C
+.CC.
+.CC.
+out:
+9
