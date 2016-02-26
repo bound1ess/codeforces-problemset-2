@@ -1,0 +1,14 @@
+in:
+2 3
+PPW
+W.P
+out:
+2
+
+in:
+3 3
+P.W
+.P.
+W.P
+out:
+0
