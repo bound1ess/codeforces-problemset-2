@@ -1,0 +1,19 @@
+in:
+Is it a melon?
+out:
+NO
+
+in:
+Is it an apple?
+out:
+YES
+
+in:
+  Is     it a banana ?
+out:
+YES
+
+in:
+Is   it an apple  and a  banana   simultaneouSLY?
+out:
+YES
