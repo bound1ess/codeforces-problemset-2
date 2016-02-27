@@ -1,0 +1,14 @@
+in:
+1 1 2
+out:
+0 1 1
+
+in:
+3 4 5
+out:
+1 3 2
+
+in:
+4 1 1
+out:
+Impossible
