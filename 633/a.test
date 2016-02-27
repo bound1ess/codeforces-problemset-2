@@ -1,0 +1,14 @@
+in:
+4 6 15
+out:
+No
+
+in:
+3 2 7
+out:
+Yes
+
+in:
+6 11 6
+out:
+Yes
