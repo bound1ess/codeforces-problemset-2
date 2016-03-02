@@ -1,0 +1,14 @@
+in:
+2 10
+half
+halfplus
+out:
+15
+
+in:
+3 10
+halfplus
+halfplus
+halfplus
+out:
+55
