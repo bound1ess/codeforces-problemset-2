@@ -1,0 +1,20 @@
+in:
+5
+1 2 3 4 5
+ABABA
+out:
+11
+
+in:
+5
+1 2 3 4 5
+AAAAA
+out:
+15
+
+in:
+1
+1
+B
+out:
+1
