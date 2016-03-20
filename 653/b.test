@@ -1,0 +1,29 @@
+in:
+3 5
+ab a
+cc c
+ca a
+ee c
+ff d
+out:
+4
+
+in:
+2 8
+af e
+dc d
+cc f
+bc b
+da b
+eb a
+bb b
+ff c
+out:
+1
+
+in:
+6 2
+bb a
+ba a
+out:
+0
