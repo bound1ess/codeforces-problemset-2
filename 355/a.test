@@ -1,0 +1,19 @@
+in:
+4 4
+out:
+4000
+
+in:
+5 1
+out:
+10000
+
+in:
+1 0
+out:
+0
+
+in:
+15 0
+out:
+No solution
