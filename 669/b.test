@@ -1,0 +1,13 @@
+in:
+3
+>><
+2 1 1
+out:
+INFINITE
+
+in:
+2
+><
+1 2
+out:
+FINITE
