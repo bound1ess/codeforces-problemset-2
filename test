@@ -24,7 +24,7 @@ output_file = task_dir + 'output'
 exec_file = task_dir + task[-1:]
 
 if not os.path.exists(source_file):
-  print('Source file not found: ' + souce_file)
+  print('Source file not found: ' + source_file)
   quit()
 
 if not os.path.exists(test_file):
