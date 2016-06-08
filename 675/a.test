@@ -1,0 +1,19 @@
+in:
+1 7 3
+out:
+YES
+
+in:
+10 10 0
+out:
+YES
+
+in:
+1 -4 5
+out:
+NO
+
+in:
+0 60 50
+out:
+NO
