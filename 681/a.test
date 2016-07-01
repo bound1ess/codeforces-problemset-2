@@ -1,0 +1,15 @@
+in:
+3
+Burunduk1 2526 2537
+BudAlNik 2084 2214
+subscriber 2833 2749
+out:
+YES
+
+in:
+3
+Applejack 2400 2400
+Fluttershy 2390 2431
+Pinkie_Pie -2500 -2450
+out:
+NO
